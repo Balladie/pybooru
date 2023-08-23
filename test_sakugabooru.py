@@ -53,7 +53,6 @@ if __name__ == '__main__':
     args = parse_args()
 
     LIMIT = 1000
-    DEBUG_PAGE_LIMIT = 2
 
     # Page index for iteration
     page, json_list, json_path = initialize_idx_json(args)
@@ -96,8 +95,6 @@ if __name__ == '__main__':
                 extension = os.path.splitext(post['file_url'])[1]
                 save_fp = os.path.join(video_dir, str(post['id']) + extension)
                 save_fp_list.append(save_fp)
-
-            if i >= DEBUG_PAGE_LIMIT: break
 
         # Save JSON file
         with open(json_path, 'w') as f:
