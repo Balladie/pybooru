@@ -21,3 +21,6 @@ venv/
 .pytest_cache
 pro.py
 test.json
+
+# data
+data/
